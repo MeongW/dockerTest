@@ -86,7 +86,7 @@ jobs:
 
       ## deploy to production
       - name: Deploy to prod
-        uses: MeongW/ssh-action@master
+        uses: appleboy/ssh-action@master
         id: deploy-prod
         if: contains(github.ref, 'main')
         with:
@@ -104,7 +104,7 @@ jobs:
 
       ## deploy to develop
       - name: Deploy to dev
-        uses: MeongW/ssh-action@master
+        uses: appleboy/ssh-action@master
         id: deploy-dev
         if: contains(github.ref, 'develop')
         with:
